@@ -185,12 +185,6 @@ section{
     color: black;
 }
 
-@media (max-width: 768px) {
-  h1 {
-    font-size: 28px;
-  }
-}
-
 @media(max-width:1285px){
     #menu-icon{
         display: block;
@@ -232,4 +226,14 @@ section{
         width: 56vw;
     }
 
+}
+
+@media (max-width: 768px) {
+  .profile-content h1 {
+    font-size: 5rem;
+  }
+
+  .profile-content p {
+    font-size: 1.1rem;
+  }
 }
