@@ -185,6 +185,11 @@ section{
     color: black;
 }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+}
 
 @media(max-width:1285px){
     #menu-icon{
@@ -226,4 +231,5 @@ section{
     .profile-img img{
         width: 56vw;
     }
+
 }
