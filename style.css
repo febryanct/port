@@ -452,4 +452,30 @@ section{
   .profile-content p{
     font-size: 1.1rem;
   }
+  .experience-box {
+        grid-template-columns: 1fr; /* jadi 1 kolom */
+        gap: 2rem; /* jarak antar card */
+    }
+
+    .experience-card {
+        max-width: 100%; /* biar full width tapi tetap pas layar */
+        padding: 3rem 1.5rem; /* kurangi padding biar ga kepotong */
+    }
+
+    .experience-card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience-card p,
+    .experience-card h3 {
+        font-size: 0.9rem;
+    }
+
+    .experience-card {
+        border-radius: 1rem;
+    }
 }
