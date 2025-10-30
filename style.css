@@ -203,7 +203,10 @@ section{
     /* grid-template-columns: repeat(auto-fit, minmax (300px, 1fr)); */
     grid-template-columns: repeat(2,1fr);
     align-items: center;
+    justify-content: center;
     gap: 2.5rem;
+    flex-wrap: wrap;
+    place-items: center;
 }
 .skill-box{
     display: flex;
@@ -215,6 +218,11 @@ section{
     cursor: pointer;
     border: 5px solid transparent;
     transition: 0.4s ease-in-out;
+
+    flex-direction: column;
+    padding: 5rem 2rem;
+    width: 100%;
+    max-width: 400px;
 }
 .skill-box:hover{
     background: var(--second-bg-color);
@@ -442,56 +450,38 @@ section{
     .profile-img img{
         width: 56vw;
     }
+    .skill h2{
+        margin-bottom: 3rem;
+    }
+    .skill-container{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
 
 @media (max-width: 768px) {
   .profile-content h1{
     font-size: 5rem;
   }
-
   .profile-content p{
     font-size: 1.1rem;
   }
-    .experience-box,
-    .skill-info,
-    .education-box {
-        grid-template-columns: 1fr; /* ubah jadi satu kolom */
-        gap: 2rem;
-        justify-items: center;
-    }
 
-    .experience h2,
-    .skill h2,
-    .education h2 {
-        font-size: 1.8rem;
-        text-align: center;
-    }
-
-    .experience-card p,
-    .skill-card p,
-    .education-card p {
-        font-size: 0.9rem;
-        line-height: 1.5;
-        text-align: center;
-    }
-
-    .experience-card,
-    .skill-card,
-    .education-card {
-        border-radius: 1rem;
-        padding: 2rem 1.5rem;
-    }
-
-    /* biar elemen timeline di Education tetap proporsional */
-    .timeline::before {
-        left: 20px;
-    }
-
-    .timeline-item {
-        margin-left: 50px;
-    }
-
-    .timeline-content {
-        width: calc(100% - 70px);
-    }
+  .skill-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .skill-box{
+    width: 30vw;
+    padding: 2rem;
+    border-radius: 1.5rem;
+  }
+  .timeline{
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+  .timeline-item{
+    width: 100%;
+  }
 }
