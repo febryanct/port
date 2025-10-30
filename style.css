@@ -192,24 +192,41 @@ section{
 }
 
 .skill{
-    background-color: var(--bg-color);
-    color: black;
+    /* background-color: var(--bg-color);
+    color: black; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 2rem 1rem;
 }
 .skill h2{
     color: var(--text-color);
 }
 .skill-container{
-    display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax (300px, 1fr)); */
+    /* display: grid;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     justify-content: center;
     gap: 2.5rem;
     flex-wrap: wrap;
-    place-items: center;
+    place-items: center; */
+    
+    display: flex;
+    flex-wrap: wrap; /* Supaya di HP bisa turun */
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1000px; /* Biar gak terlalu lebar di laptop */
+    margin: 0 auto;
+
 }
 .skill-box{
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--main-color);
@@ -222,7 +239,20 @@ section{
     flex-direction: column;
     padding: 5rem 2rem;
     width: 100%;
-    max-width: 400px;
+    max-width: 400px; */
+
+    background-color: #777;
+    border-radius: 20px;
+    width: 90%; /* default: full di HP */
+    max-width: 280px; /* batas di laptop */
+    height: auto;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
 }
 .skill-box:hover{
     background: var(--second-bg-color);
@@ -311,6 +341,7 @@ section{
     display: flex;
     flex-wrap: wrap;
     position: relative;
+    align-items: flex-end;
 }
 .timeline-items::before{
     content: "";
@@ -484,9 +515,61 @@ section{
   .timeline-item{
     width: 100%;
   }
-    .timeline-content h3,
+   .skill-container {
+    flex-direction: row;
+  }
+  .skill-card {
+    width: 30%;
+  }
+   .skill-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-box {
+    width: 85%;
+    height: auto;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .skill-box p {
+    max-height: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+ .experience-box {
+    grid-template-columns: 1fr; /* ubah jadi 1 kolom di HP */
+    row-gap: 2rem;              /* jarak antar card biar gak nempel */
+  }
+
+  .experience-card {
+    width: 90%;                 /* biar proporsional di layar kecil */
+    max-width: 350px;
+    padding: 3rem 1.5rem;       /* sedikit lebih kecil padding-nya */
+  }
+
+  .education {
+    padding: 2rem 1rem;
+  }
+
+  .education h2 {
+    font-size: 2rem; /* Supaya judul gak kebesaran */
+    margin-bottom: 2rem;
+  }
+ .timeline-item {
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center; /* Bikin teks di tengah */
+  }
+
+  .timeline-content h3,
   .timeline-content p{
-    text-align: center;
+    text-align: center; /* Semua teks di dalam kotak ikut tengah */
+  }
+
+  .timeline-dot {
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
-
