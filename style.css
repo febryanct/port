@@ -452,30 +452,46 @@ section{
   .profile-content p{
     font-size: 1.1rem;
   }
-  .experience-box {
-        grid-template-columns: 1fr; /* jadi 1 kolom */
-        gap: 2rem; /* jarak antar card */
+    .experience-box,
+    .skill-info,
+    .education-box {
+        grid-template-columns: 1fr; /* ubah jadi satu kolom */
+        gap: 2rem;
+        justify-items: center;
     }
 
-    .experience-card {
-        max-width: 100%; /* biar full width tapi tetap pas layar */
-        padding: 3rem 1.5rem; /* kurangi padding biar ga kepotong */
+    .experience h2,
+    .skill h2,
+    .education h2 {
+        font-size: 1.8rem;
+        text-align: center;
     }
 
-    .experience-card img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-}
-
-@media (max-width: 480px) {
     .experience-card p,
-    .experience-card h3 {
+    .skill-card p,
+    .education-card p {
         font-size: 0.9rem;
+        line-height: 1.5;
+        text-align: center;
     }
 
-    .experience-card {
+    .experience-card,
+    .skill-card,
+    .education-card {
         border-radius: 1rem;
+        padding: 2rem 1.5rem;
+    }
+
+    /* biar elemen timeline di Education tetap proporsional */
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        margin-left: 50px;
+    }
+
+    .timeline-content {
+        width: calc(100% - 70px);
     }
 }
