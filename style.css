@@ -484,4 +484,9 @@ section{
   .timeline-item{
     width: 100%;
   }
+    .timeline-content h3,
+  .timeline-content p{
+    text-align: center;
+  }
 }
+
