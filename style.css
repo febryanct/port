@@ -576,5 +576,15 @@ section{
     left: 50%;
     transform: translateX(-50%);
   }
+
+.skill h2{
+    font-size: 2rem; /* Supaya judul gak kebesaran */
+    margin-bottom: 2rem;
+    }
+  .experience h2{
+    font-size: 2rem; /* Supaya judul gak kebesaran */
+    margin-bottom: 2rem;
+    }
 }
+
 
