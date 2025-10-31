@@ -55,8 +55,8 @@ color: var(--text-color);
 span{
     background: linear-gradient(
         270deg,
-        rgb(184, 59, 242) 10%,
-        rgb(34, 78, 224) 100%
+        rgb(157, 156, 158) 10%,
+        rgb(93, 87, 95) 100%
     );
     background-clip: text;
     color: transparent;
@@ -79,8 +79,8 @@ span{
     border-radius: 3rem;
     background: linear-gradient(
         270deg,
-        rgb(184, 59, 242) 10%,
-        rgb(34, 78, 224) 100%
+        rgb(157, 156, 158) 10%,
+        rgb(93, 87, 95) 100%
     );
     letter-spacing: 1px;
     cursor: pointer;
@@ -577,3 +577,4 @@ section{
     transform: translateX(-50%);
   }
 }
+
