@@ -561,23 +561,51 @@ section{
     font-size: 2rem; /* Supaya judul gak kebesaran */
     margin-bottom: 2rem;
   }
- .timeline-item {
-    width: 100%;
-    padding: 1.5rem;
-    text-align: center; /* Bikin teks di tengah */
+.timeline-items {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
-  .timeline-content h3,
-  .timeline-content p{
-    text-align: center; /* Semua teks di dalam kotak ikut tengah */
+  .timeline-items::before {
+    left: 10px; /* garis di kiri */
   }
 
   .timeline-dot {
-    left: 50%;
-    transform: translateX(-50%);
+    left: 2px;
+    transform: translateX(0);
   }
 
-.skill h2{
+  .timeline-date {
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  .timeline-content {
+    width: 95%; /* 🔹 lebar hampir penuh layar */
+    max-width: 320px;
+    margin-left: 3rem; /* sejajar dengan tahun */
+    padding: 2rem 2.5rem;
+    border-radius: 1.5rem;
+    background-color: var(--bg-color);
+    border: 3px solid var(--main-color);
+    box-shadow: 0 0 15px var(--main-color);
+  }
+
+  .timeline-content h3 {
+    font-size: 1.7rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .timeline-content p {
+    font-size: 1.35rem;
+    line-height: 1.6;
+  }
+
+  .skill h2{
     font-size: 2rem; /* Supaya judul gak kebesaran */
     margin-bottom: 2rem;
     }
@@ -586,5 +614,3 @@ section{
     margin-bottom: 2rem;
     }
 }
-
-
